@@ -32,10 +32,9 @@
 </template>
 
 <script>
-    var vm = new Vue({
-      el: '#sidebar',
-      data() {
-        return {
+export default {
+  data() {
+    return {
           menu: [
             {
               nome: 'Compras',
@@ -122,15 +121,15 @@
               ]
             }
           ]
-        }
-      },
-      mounted() {
-        console.warn('oi')
-      },
-      methods: {
-      },
-    })
-  </script>
+      }
+    },
+    mounted() {
+      console.warn('oi')
+    },
+    methods: {
+    },
+}
+</script>
 
 <style>
 
