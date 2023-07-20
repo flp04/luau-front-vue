@@ -18,9 +18,9 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span><router-link to="login">Alerts</router-link></span>
-            </a>
+            <router-link to="login">
+              <i class="bi bi-circle"></i><span>Alertas</span>
+              </router-link>
           </li>
           <li>
             <a href="components-accordion.html">
