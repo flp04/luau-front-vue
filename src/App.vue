@@ -2,7 +2,7 @@
   <Header/>
   <router-view/>
   <SideBar/>
-  <Footer/>
+  <!-- <Footer/> -->
 </template>
 
 <script>
@@ -16,6 +16,9 @@ export default {
     return {
 
     }
+  },
+  mounted() {
+    
   },
   components: {
     SideBar,

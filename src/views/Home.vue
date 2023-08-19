@@ -1,36 +1,40 @@
 <template>
   <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
-    
+    <section>
+    </section>    
 
   </main><!-- End #main -->
 </template>
 
 <script>
 import api from '../api';
+import axios from 'axios'
 
 export default {
   name: 'Home',
   components: {},
+  data() {
+    return {
+    }
+  },
   mounted() {
-    api.login({email: 'filipe.husak87@gmail.com', password: 'Hungria*8'})
+    console.log('oi')
+    const code = 'PL';
+    const url = `/api/competitions/PL/matches`;
+    // const url = `http://api.football-data.org/v4/competitions/${code}/matches`;
+    const headers = {
+      'X-Auth-Token': 'bef4843a927541c5b894ff0c1d3c78ae',
+    };
+
+    axios.get(url, { headers })
       .then(response => {
-        const token = response.data.token
-        console.log(token)
+        this.matches = response.data;
       })
       .catch(error => {
-        console.error(error)
-      })
+        console.error('Error fetching matches:', error);
+      });
+  },
+  methods: {
   },
 }
 
