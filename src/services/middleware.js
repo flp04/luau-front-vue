@@ -5,7 +5,7 @@ export default {
     if(!token) {
       next('login')
     }
-    next()
+    next('Home')
     // console.log(to, from, next)
   }
 }

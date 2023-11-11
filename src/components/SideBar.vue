@@ -6,7 +6,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="/">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -18,9 +18,10 @@
         </a>
         <ul v-if="item.subitens" :id="`${item.nome}-nav`" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li v-for="subitem in item.subitens">
-            <a :href="subitem.rota">
+            <!-- <a :href="subitem.rota">
               <i class="bi bi-circle"></i><span>{{ subitem.nome }}</span>
-            </a>
+            </a> -->
+            <router-link :to="subitem.rota"><i class="bi bi-circle"></i><span>{{ subitem.nome }}</span></router-link>
           </li>
         </ul>
       </li>
@@ -36,95 +37,104 @@ export default {
   data() {
     return {
           menu: [
-            {
-              nome: 'Compras',
-              // rota: 'compras.php',
-              subitens: [
-                {
-                  nome: 'Cadastrar Nova Compra',
-                  rota: 'nova-compra.php'
-                },
-                {
-                  nome: 'Lista de Compras',
-                  rota: 'compras.php'
-                },
-              ]
-            },
-            {
-              nome: 'Vendas',
-              // rota: 'compras.php',
-              subitens: [
-                {
-                  nome: 'Cadastrar Nova Venda',
-                  rota: 'nova-venda.php'
-                },
-                {
-                  nome: 'Lista de Vendas',
-                  rota: 'vendas.php'
-                },
-              ]
-            },
-            {
-              nome: 'Parcelamentos',
-              // rota: 'compras.php',
-              subitens: [
-                {
-                  nome: 'Lista de Parcelamentos',
-                  rota: 'parcelamentos.php'
-                },
-                {
-                  nome: 'Registrar Pagamento de Parcela',
-                  rota: 'nova-pagamento.php'
-                }
-              ]
-            },
+            // {
+            //   nome: 'Produtos',
+            //   rota: '',
+            //   subitens: [
+            //     {
+            //       nome: 'Cadastrar Novo Produto',
+            //       rota: '/novo-produto'
+            //     },
+            //     {
+            //       nome: 'Lista de Produtos',
+            //       rota: '/produtos'
+            //     }
+            //    ]
+            // },
+            // {
+            //   nome: 'Fornecedores',
+            //   rota: '',
+            //   subitens: [
+            //     {
+            //       nome: 'Cadastrar Novo Fornecedor',
+            //       rota: '/novo-fornecedor'
+            //     },
+            //     {
+            //       nome: 'Lista de Fornecedores',
+            //       rota: '/fornecedores'
+            //     }
+            //   ],
+            // },
+            // {
+            //   nome: 'Compras',
+            //   // rota: 'compras',
+            //   subitens: [
+            //     {
+            //       nome: 'Cadastrar Nova Compra',
+            //       rota: '/nova-compra'
+            //     },
+            //     {
+            //       nome: 'Lista de Compras',
+            //       rota: '/compras'
+            //     },
+            //   ]
+            // },
             {
               nome: 'Clientes',
               rota: '',
               subitens: [
                 {
-                  nome: 'Lista de Clientes',
-                  rota: 'clientes.php'
-                },
-                {
                   nome: 'Cadastrar Novo Cliente',
-                  rota: 'novo-cliente.php'
-                }
+                  rota: '/novo-cliente'
+                },
+                {
+                  nome: 'Lista de Clientes',
+                  rota: '/clientes'
+                },
               ],
             },
             {
-              nome: 'Fornecedores',
-              rota: '',
+              nome: 'Vendas',
+              // rota: 'compras',
               subitens: [
                 {
-                  nome: 'Lista de Fornecedores',
-                  rota: 'fornecedores.php'
+                  nome: 'Cadastrar Nova Venda',
+                  rota: '/nova-venda'
                 },
                 {
-                  nome: 'Cadastrar Novo Fornecedor',
-                  rota: 'novo-fornecedor.php'
-                }
-              ],
+                  nome: 'Lista de Vendas',
+                  rota: '/vendas'
+                },
+              ]
             },
             {
-              nome: 'Produtos',
-              rota: '',
+              nome: 'Crediário',
+              // rota: 'compras',
               subitens: [
                 {
-                  nome: 'Lista de Produtos',
-                  rota: 'produtos.php'
+                  nome: 'Novo Crediário',
+                  rota: 'novo-crediario'
                 },
                 {
-                  nome: 'Cadastrar Novo Produto',
-                  rota: 'novo-produto.php'
+                  nome: 'Lista de Vendas',
+                  rota: '/vendas'
+                },
+                {
+                  nome: 'Lista de Parcelamentos',
+                  rota: 'crediarios'
+                  // rota: '/'
+                },
+                {
+                  nome: 'Registrar Pagamento de Parcela',
+                  // rota: 'nova-pagamento'
+                  rota: '/'
                 }
               ]
-            }
+            },
           ]
       }
     },
     mounted() {
-      console.warn('oi')
     },
     methods: {
     },

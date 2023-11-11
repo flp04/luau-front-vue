@@ -47,8 +47,17 @@ export default {
         })
         .then(response => response.json())
         .then(res => {
+          if (res.error) {
+            console.log(res.error)
+          }
+          console.warn(res)
           localStorage.setItem('token', res.access_token)
-          this.$router.push('about')
+          localStorage.setItem('profile_img', res.profile_img)
+          window.location.reload()
+          // this.$router.push('/')
+        })
+        .catch((error) => {
+          console.log(error)
         })
     }
   },
