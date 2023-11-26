@@ -1,5 +1,6 @@
 <template>
   <section>
+<<<<<<< HEAD
     <!-- <main v-if="false" id="main" class="main"> -->
     <main id="main" class="main">
       <div class="pagetitle">
@@ -192,3 +193,8 @@ export default {
     }
   }
 </style>
+=======
+    Hello
+  </section>
+</template>
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503

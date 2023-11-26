@@ -12,10 +12,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item" v-for="item in menu">
-        <a class="nav-link collapsed" :data-bs-target="`#${item.nome}-nav`" data-bs-toggle="collapse" href="">
-          <i class="bi bi-menu-button-wide"></i><span>{{ item.nome }}</span><i class="bi bi-chevron-down ms-auto"></i>
+      <li class="nav-item" v-for="campeonato in competicoes" ::key="campeonato">
+        <!-- <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" :href=`index.php?code=${campeonato.code}`> -->
+        <a class="nav-link" data-bs-target="#components-nav" :href="`/liga/${campeonato.code}`">
+          <img :src="campeonato.emblem" style="width: 24px; height: 24px;"><span>{{ campeonato.nome }}</span>
         </a>
+<<<<<<< HEAD
         <ul v-if="item.subitens" :id="`${item.nome}-nav`" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li v-for="subitem in item.subitens">
             <!-- <a :href="subitem.rota">
@@ -24,6 +26,8 @@
             <router-link :to="subitem.rota"><i class="bi bi-circle"></i><span>{{ subitem.nome }}</span></router-link>
           </li>
         </ul>
+=======
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
       </li>
 
     </ul>
@@ -36,6 +40,7 @@
 export default {
   data() {
     return {
+<<<<<<< HEAD
           menu: [
             // {
             //   nome: 'Produtos',
@@ -138,6 +143,52 @@ export default {
     },
     methods: {
     },
+=======
+      competicoes: [
+        {
+          nome: 'Campeonato Brasileiro',
+          code: 'BSA',
+          emblem: 'https://crests.football-data.org/764.svg'
+        },
+        {
+          nome: 'Campeonato Inglês',
+          code: 'PL',
+          emblem: 'https://crests.football-data.org/PL.png'
+        },
+        {
+          nome: 'Campeonato Português',
+          code: 'PPL',
+          emblem: 'https://crests.football-data.org/PPL.png'
+        },
+        {
+          nome: 'Campeonato Alemão',
+          code: 'BL1',
+          emblem: 'https://crests.football-data.org/BL1.png'
+        },
+        {
+          nome: 'Campeonato Holandes',
+          code: 'DED',
+          emblem: 'https://crests.football-data.org/ED.png'
+        },
+        {
+          nome: 'Campeonato Espanhol',
+          code: 'PD',
+          emblem: 'https://crests.football-data.org/PD.png'
+        },
+        {
+          nome: 'Campeonato Francês',
+          code: 'FL1',
+          emblem: 'https://crests.football-data.org/FL1.png'
+        },
+      ]
+    }
+  },
+  mounted() {
+    console.warn('oi')
+  },
+  methods: {
+  },
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
 }
 </script>
 

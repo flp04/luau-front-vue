@@ -237,7 +237,11 @@ export default {
         let dia = dataAtual.getDate()
         let mes = dataAtual.getMonth()
         let ano = dataAtual.getFullYear()
+<<<<<<< HEAD
         if (this.parcelamento.dia_vencimento > dia) {
+=======
+        if (this.parcelamento.dia_vencimento >= dia) {
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
           this.parcelamento.data_primeira_parcela = new Date(ano, mes, this.parcelamento.dia_vencimento).toISOString().substring(0, 10)
         } else {
           this.parcelamento.data_primeira_parcela = new Date(ano, mes + 1, this.parcelamento.dia_vencimento).toISOString().substring(0, 10)

@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/api"
+  to = "http://api.football-data.org"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-Auth-Token: bef4843a927541c5b894ff0c1d3c78ae}

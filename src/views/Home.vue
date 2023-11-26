@@ -1,5 +1,6 @@
 <template>
   <main id="main" class="main">
+<<<<<<< HEAD
 
     <div class="pagetitle">
       <h1>Dashboard</h1>
@@ -641,6 +642,9 @@
           </div><!-- End Right side columns -->
 
       </div>
+=======
+    <section>
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
     </section>    
 
   </main><!-- End #main -->
@@ -648,12 +652,14 @@
 
 <script>
 import api from '../api';
+import axios from 'axios'
 
 export default {
   name: 'Home',
   components: {},
   data() {
     return {
+<<<<<<< HEAD
       compras: [],
       totalCompras: 0,
       filtroCompras: 'Ano',
@@ -797,6 +803,28 @@ export default {
       this.totalVendas = soma
       this.filtroVendas = "Hoje"
     }
+=======
+    }
+  },
+  mounted() {
+    console.log('oi')
+    const code = 'PL';
+    const url = `/api/competitions/PL/matches`;
+    // const url = `http://api.football-data.org/v4/competitions/${code}/matches`;
+    const headers = {
+      'X-Auth-Token': 'bef4843a927541c5b894ff0c1d3c78ae',
+    };
+
+    axios.get(url, { headers })
+      .then(response => {
+        this.matches = response.data;
+      })
+      .catch(error => {
+        console.error('Error fetching matches:', error);
+      });
+  },
+  methods: {
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
   },
 }
 

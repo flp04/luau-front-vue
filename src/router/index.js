@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+<<<<<<< HEAD
 import Login from '../components/Login.vue'
+=======
+import Login from '../views/Login.vue'
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
 import CadastrarCompra from '../views/CadastrarCompra.vue'
 import Compras from '../views/Compras.vue'
 import Compra from '../views/Compra.vue'
@@ -16,11 +20,15 @@ import Cliente from '../views/Cliente.vue'
 import CadastrarVenda from '../views/CadastrarVenda.vue'
 import Vendas from '../views/Vendas.vue'
 import Venda from '../views/Venda.vue'
+<<<<<<< HEAD
 import CadastrarCrediario from '../views/CadastrarCrediario.vue'
 import Crediarios from '../views/Crediarios.vue'
 import Crediario from '../views/Crediario.vue'
+=======
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
 import About from '../views/About.vue'
 import Guard from '../services/middleware.js'
+import Liga from '../views/Liga.vue'
 
 const routes = [
   {
@@ -38,7 +46,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About,
+<<<<<<< HEAD
     // beforeEnter: Guard.auth
+=======
+    beforeEnter: Guard.auth
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
   },
   {
     path: '/novo-fornecedor',
@@ -121,6 +133,7 @@ const routes = [
     props: true
   },
   {
+<<<<<<< HEAD
     path: '/novo-crediario',
     name: 'novoCrediario',
     component: CadastrarCrediario
@@ -134,6 +147,11 @@ const routes = [
     path: '/crediario/:id',
     name: 'crediario',
     component: Crediario,
+=======
+    path: '/liga/:code',
+    name: 'liga',
+    component: Liga,
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
     props: true
   }
 ]

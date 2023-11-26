@@ -22,6 +22,7 @@ export default {
     return {
     }
   },
+<<<<<<< HEAD
   computed: {
     token() {
       return localStorage.getItem('token')
@@ -39,6 +40,10 @@ export default {
     .then(res => {
       localStorage.setItem('definicaoInputs', JSON.stringify(res))
     })
+=======
+  mounted() {
+    
+>>>>>>> 0b78401c55593c9debce0aa4ff22d2afa2794503
   },
   components: {
     SideBar,
